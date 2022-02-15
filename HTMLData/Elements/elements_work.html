@@ -8,23 +8,202 @@
         <style>
             #base {
                 position: fixed;
-                left: 10px;
-                bottom: 0;
+                right: 10px;
+                bottom: 80px;
             }
             #elements {
                 position: fixed;
                 right: 10px;
-                bottom: 0;
+                bottom: 40px;
             }
 
             #main_menu {
                 position: fixed;
-                left: 10px;
-                bottom: 40px;
+                right: 10px;
+                bottom: 0;
+            }
+            #java_img {
+                float: left;
+                margin-right: 10px;
+            }
+            #lorem_img {
+                float: left;
+                margin-right: 10px;
             }
         </style>
     </head>
-    <body></body>
+    <body>
+        <h2><mark>Элементы группировки:</mark></h2>
+        <!-- Элемент div служит для структуризации контента на веб-странице, для заключения содержимого в отдельные блоки. Div создает блок, который по умолчанию растягивается по всей ширине браузера, а следующий после div элемент переносится на новую строку: -->
+        <div>Заголовок документа HTML5</div>
+
+        <!-- Параграфы заключают некоторое содержимое 
+            (каждый новый параграф располагается на новой строке): -->
+        <div>
+            <p>Первый параграф</p>
+            <p>Второй параграф</p>
+        </div>
+
+        <!-- В рамках одного элемента(p) можно перенести текст на другую строку, 
+            воспользовавшись элементом <br>: -->
+        <p>
+            Первая строка.<br />
+            Вторая строка.
+        </p>
+
+        <!-- Элемент pre выводит предварительно отформатированный текст так, как он определен: -->
+        <pre>
+            Первая строка 
+            Вторая строка 
+            Третья строка
+        </pre>
+
+        <!-- Элемент span обтекает некоторый текст по всей его длине и служит преимущественно для стилизации заключенного в него текстового содержимого (в отличие от блоков div или p, span не переносит содержимое на следующую строку): -->
+
+        <!-- [Элементы div и p являются блочными, элемент div может содержать любые другие элементы, а элемент p - только строчные элементы. В отличие от них элемент span является строчным, то есть встраивает свое содержимое во внешний контейнер(div или параграф). Не следует помещать блочные элементы в строчный элемент span.] -->
+        <div>
+            <p><span style="color: red">Первый</span> параграф</p>
+
+            <!-- Сам по себе span ничего не делает: -->
+            <p><span>Второй</span> параграф</p>
+        </div>
+
+        <h2><mark>Заголовки:</mark></h2>
+
+        <!-- Элементы <h1>, <h2>, <h3>, <h4>, <h5> и <h6> служат для создания заголовков различного уровня
+            Заголовки выделяют шрифт жирным и по умолчанию -->
+        <!-- [При определении заголовков следует учитывать, что на странице должен быть только один заголовок первого уровня, то есть <h1>] -->
+        <h1>Заголовок первого уровня</h1>
+        <h2>Заголовок второго уровня</h2>
+        <h3>Заголовок третьего уровня</h3>
+        <h4>Заголовок четвертого уровня</h4>
+        <h5>Заголовок пятого уровня</h5>
+        <h6>Заголовок шестого уровня</h6>
+
+        <h2><mark>Форматирование текста:</mark></h2>
+
+        <!--Ряд элементов html предназначены для форматирования текстового содержимого:
+            * <b> - выделяет текст жирным;
+            * <del> - зачеркивает текст [представляет собой удаление из документа];
+            * <i> -  выделяет текст курсивом;
+            * <em> - выделяет текст курсивом, в отличие от тега <i> носит логическое значение, придает
+                    выделяемому тексту оттенок важности;
+            * <s> - зачеркивает текст [Представляет собой содержимое, которое больше не является точным или    
+                                        более не актуальным];
+            * <small> - делает текст чуть меньше размером, чем окружающий;
+            * <strong> - выделяет текст жирным. В отличие от тега <b> предназначен для логического выделения, 
+                        чтобы показать важность текста. А <b> не носит характера логического выделения, выполняет функции только форматирования;
+            * <sub> - помещает текст под строкой;
+            * <sup> - помещает текст над строкой;
+            * <mark> - выделяет текст цветом, придавая ему оттенок важности; 
+            * <u> - подчеркивает текст;
+            * <ins> - определяет вставленный (или добавленный) текст;
+                -->
+
+        <p>Это <b>выделенный "жирный"</b> текст</p>
+        <p>Это <del>зачеркнутый(удаленный)</del> текст</p>
+        <p>Это текст <i>курсивом</i></p>
+        <p>Это <em>важный</em> текст курсивом</p>
+        <p>Это <s>не актульаный</s> текст</p>
+        <p>Это, <small>меньший размером,</small> текст</p>
+        <p>Это <strong>важный "жирный"</strong> текст</p>
+        <p>Это<sub>подстрочный</sub>текст</p>
+        <p>Это<sup>надстрочный</sup>текст</p>
+        <p>Это <mark>выделенный, цветом,</mark> текст</p>
+        <p>Это <u>подчеркнутый</u> текст</p>
+        <p>Это <ins>добавленный</ins> текст</p>
+
+        <h2><mark>Работа с изображениями:</mark></h2>
+
+        <!-- Элемент img отвечает за вывод изображений. Этот элемент представляет два важных атрибута: 
+            * src - путь к изображению. Это может быть
+            относительный или абсолютный путь в файловой системе или адрес в
+            интернете
+            * alt - текстовое описание изображения. Если браузер по каким-то
+            причинам не может отобразить изображение (у атрибута src
+            некорректно задан путь), то браузер показывает вместо самой картинки
+            данное текстовое описание. 
+            Атрибут alt также важен тем, что поисковые
+            системы по текстовому описанию могут индексировать изображение. -->
+
+        <div>
+            <!-- Элемент img является пустым элементом (не содержит закрывающегося тега) -->
+
+            <img
+                id="java_img"
+                src="http://127.0.0.1:5500/HTMLData/images/Java_Runtime_Environment.png"
+                alt="Лучший ЯП"
+            />
+            <h1>Java</h1>
+            <b>Java </b> — строго типизированный объектно-ориентированный язык
+            <br />
+            программирования общего назначения, разработанный компанией Sun
+            <br />
+            Microsystems. Разработка ведётся сообществом, организованным через
+            <br />
+            Java Community Process; язык и основные реализующие его технологии
+            <br />
+            распространяются по лицензии GPL.
+        </div>
+
+        <div>
+            <!-- Используя стилевые особенности, в частности, отступы и обтекание, можно комбинировать изображения с текстом: -->
+
+            <img
+                id="lorem_img"
+                src="http://127.0.0.1:5500/HTMLData/images/loremipsum.png"
+                alt="Lorem Ipsum generation text"
+            />
+            <h1>Lorem Ipsum</h1>
+            <b>Lorem </b> — Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. At voluptatum suscipit quod, facilis sed maiores laboriosam
+            aut tempore laudantium ipsam libero error nihil expedita nemo. Quae
+            laboriosam quam reiciendis dolores explicabo adipisci incidunt
+            dolorum accusamus at! Et dolore doloribus saepe libero explicabo
+            necessitatibus enim aspernatur voluptatibus esse odit, magni hic
+            veritatis nemo deleniti ullam aliquid natus, laboriosam provident.
+            Saepe rerum consectetur sequi pariatur? Dignissimos itaque
+            voluptates cupiditate magni suscipit corporis quasi neque fugiat
+            possimus obcaecati odit quis inventore facere ipsa iste reiciendis
+            iusto perferendis delectus rem nostrum, veritatis perspiciatis?
+            Praesentium officia itaque totam perspiciatis repudiandae sint vitae
+            magni voluptates porro aut commodi pariatur odit eos in quod, velit
+            quia fugit non harum tenetur, nisi aliquam iure eum? Corrupti quasi,
+            consectetur soluta sunt culpa blanditiis laudantium aspernatur
+            corporis veritatis laborum quo doloremque aut voluptatem expedita
+            consequuntur excepturi molestiae repellendus! Odit doloremque
+            laborum quod saepe enim expedita quia quae praesentium optio? Quasi
+            laboriosam incidunt, illum aliquid velit id, mollitia odio numquam
+            asperiores rem minus dignissimos. Officia doloremque tenetur id.
+            Obcaecati quasi omnis hic illo a, rem enim sit, iusto perferendis
+            accusantium, aliquam dignissimos quod reiciendis! Molestiae eius
+            adipisci velit, cupiditate rem, qui laudantium itaque, blanditiis
+            sunt nesciunt quo? Laboriosam perspiciatis distinctio sequi ipsa
+            porro corrupti libero hic cum blanditiis consectetur saepe quibusdam
+            rerum culpa obcaecati voluptate velit nihil, aperiam voluptates, ea
+            nulla dicta eum! Itaque omnis ea voluptatibus ipsum, aliquam
+            eligendi aliquid dolore ex explicabo tempora quia et sed quis dicta
+            sequi consequatur vitae quibusdam possimus. Repudiandae porro
+            dolores eos ducimus? Beatae cupiditate rem placeat sed, at neque
+            fugit. Iure, assumenda sapiente iusto molestiae doloribus commodi
+            eos dicta, quibusdam vel vero eum? Inventore in commodi, dolorem
+            reprehenderit eius perspiciatis! Quas, deserunt unde magni
+            voluptatum doloribus cumque! Incidunt nobis quae quam facere placeat
+            totam laudantium quod unde nisi. Eos dolores esse ex voluptas a hic
+            assumenda, modi omnis, quisquam labore repellendus quibusdam
+            reiciendis perferendis explicabo neque commodi tempora nesciunt.
+            Repellendus odio non esse obcaecati enim error perspiciatis amet
+            ullam aliquam voluptate consectetur itaque fuga id illum mollitia
+            aperiam illo voluptatem cum, a nemo alias animi ea. Similique nihil,
+            maxime magni quam, voluptatum architecto asperiores praesentium
+            minima ducimus iusto autem corporis excepturi placeat laudantium
+            eveniet cumque. Sit, culpa repellat in ipsa mollitia laborum
+            laudantium iste adipisci temporibus a. Voluptates totam
+            reprehenderit labore delectus commodi sint tenetur voluptatibus
+            quia, sit aliquam ut porro in at facilis obcaecati voluptate
+            expedita blanditiis rerum neque dignissimos magni soluta!
+        </div>
+    </body>
 
     <body>
         <!-- Кнопки навигаций -->
@@ -36,6 +215,7 @@
         <a id="base" href="Base/attributes_work.html">
             <h2>Перейти к базовой странице</h2>
         </a>
+
         <a id="elements" href="Elements/elements_work.html">
             <h2>Перейти к странице с элементами</h2>
         </a>
