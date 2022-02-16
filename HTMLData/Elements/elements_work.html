@@ -30,6 +30,9 @@
                 float: left;
                 margin-right: 10px;
             }
+            ul#hl li {
+                display: inline;
+            }
         </style>
     </head>
     <body>
@@ -203,6 +206,122 @@
             quia, sit aliquam ut porro in at facilis obcaecati voluptate
             expedita blanditiis rerum neque dignissimos magni soluta!
         </div>
+
+        <h2><mark>Списки:</mark></h2>
+
+        <!-- Элементы <ol> (нумерованный список) и <ul> (ненумерованный список): -->
+        <!-- По умолчанию в списке в каждом элементе используются стандартные цифры от 1 в нумерованном и черной точкой в ненумерованном.-->
+        <ol>
+            <li>Нумерованный</li>
+            <li>список</li>
+            <li>в</li>
+            <li>HTML5</li>
+        </ol>
+        <ul>
+            <li>Ненумерованный</li>
+            <li>список</li>
+            <li>в</li>
+            <li>HTML5</li>
+        </ul>
+
+        <!-- При необходимости можно настроить нумерацию или отражаемый рядом с элементом символ с помощью стиля list-style-type. Данный стиль может принимать множество различных значений. 
+        Основные и часто используемые в нумернованном: -->
+
+        <!-- атрибут start задаёт номер с которого будет начинаться нумерация. -->
+
+        <!-- decimal - десятичные числа, отсчет идет от 5 -->
+        <ol style="list-style-type: decimal" start="5">
+            <li>Java</li>
+            <li>Dart</li>
+            <li>Kotlin</li>
+            <li>C++</li>
+        </ol>
+
+        <!-- decimal-leading-zero - десятичные числа, которые предваряются нулем, отсчет идет от 09-->
+        <ol style="list-style-type: decimal-leading-zero" start="9">
+            <li>JVM</li>
+            <li>JRE</li>
+            <li>Javac</li>
+            <li>JSE</li>
+            <li>JEE</li>
+        </ol>
+
+        <!--lower-roman: строчные римские цифры, отсчет идет от xiv-->
+        <ol style="list-style-type: lower-roman" start="14">
+            <li>Python</li>
+            <li>C</li>
+            <li>Go</li>
+            <li>ABC</li>
+        </ol>
+
+        <!--upper-roman: заглавные римские цифры, отсчет идет от XVIII-->
+        <ol style="list-style-type: upper-roman" start="18">
+            <li>CPython</li>
+            <li>Jython</li>
+            <li>PyPy</li>
+            <li>IronPython</li>
+        </ol>
+
+        <!-- lower-alpha: строчные римские буквы, отсчет идет от k -->
+        <ol style="list-style-type: lower-alpha" start="11">
+            <li>JavaScript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+        </ol>
+
+        <!-- upper-alpha: заглавные римские буквы, отсчет идет от T -->
+        <ol style="list-style-type: upper-alpha" start="20">
+            <li>TypeScript</li>
+            <li>HTML5</li>
+            <li>SASS</li>
+        </ol>
+
+        <!-- Для ненумерованного списка атрибут list-style-type может принимать
+        следующие значения:  -->
+
+        <!-- disc - черный круожек: -->
+        <ul style="list-style-type: disc">
+            <li>Postman</li>
+            <li>Swagger</li>
+            <li>Redoc</li>
+        </ul>
+
+        <!-- circle - пустой кружочек: -->
+        <ul style="list-style-type: circle">
+            <li>XML</li>
+            <li>JSON</li>
+            <li>YAML</li>
+        </ul>
+
+        <!-- square - черный квадратик: -->
+        <ul style="list-style-type: square">
+            <li>Django</li>
+            <li>Spring</li>
+            <li>Laravel</li>
+        </ul>
+
+        <!--list-style-image - задает изображение, которое будет отображаться рядом с элементом списка: -->
+        <ul
+            style="
+                list-style-image: url(http://127.0.0.1:5500/HTMLData/images/database.png);
+            "
+        >
+            <li>PostgreSQL</li>
+            <li>SQLite</li>
+            <li>MySQL</li>
+            <li>Oracle</li>
+        </ul>
+
+        <!--Горизонтальный тип списка. 
+            Для этого для всех элементов списка устанавливается стиль(style) - display:inline: -->
+        <ul id="hl">
+            <li>HTML</li>
+            <li>это</li>
+            <li>не</li>
+            <li>ЯП</li>
+        </ul>
+
+        <h2><mark>Элемент details:</mark></h2>
     </body>
 
     <body>
